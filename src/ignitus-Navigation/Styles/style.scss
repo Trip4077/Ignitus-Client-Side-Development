@@ -74,19 +74,6 @@ nav {
     transition: color 200ms ease-in;
   }
 
-  #signup {
-    background-color: $ignite-background-color-white;
-
-    a {
-      color: $ignite-color-blue-20;
-    }
-  }
-
-  #signin:hover {
-    a {
-      color: $ignite-background-color-white;
-    }
-  }
 
   .dropdown {
     border: 1px solid $ignite-background-color-white;

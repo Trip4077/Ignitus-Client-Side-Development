@@ -7,6 +7,9 @@
     width: 93%;
 }
 
+/*
+    scroll-style for long testimonials
+*/
 @mixin scroll-style($primary, $secondary) {
   &::-webkit-scrollbar {
     width: 5px;
@@ -22,5 +25,18 @@
 
   &::-webkit-scrollbar-thumb:hover {
     background: $secondary;
+  }
+}
+
+/*
+    split-colored text to match Ignitus bg-triangle style
+*/
+@mixin split-color-text($breakpoint, $splitPercentage) {
+  @media (max-width: $breakpoint) {
+    & {
+      background: -webkit-linear-gradient( 42deg, $ignite-color-blue-20 $splitPercentage, $ignite-color-white $splitPercentage 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 }

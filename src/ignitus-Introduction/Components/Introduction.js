@@ -7,7 +7,7 @@ import torch from '../../ignitus-Assets/Images/torch.svg';
 import resume from '../../ignitus-Assets/Images/Resume.svg';
 
 const Introduction = () => (
-  <div className="intro__wrapper" >
+  <div className="intro__wrapper bg-triangle" >
       <img className="intro__torch" src={torch} alt="Ignitus Torch" />
       <h1 className="intro text-center">Welcome to Ignitus</h1>
 

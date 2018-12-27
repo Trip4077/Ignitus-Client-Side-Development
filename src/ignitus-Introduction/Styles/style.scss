@@ -1,5 +1,6 @@
 // import ignitus token variables
 @import './src/shared/styles/ignitus-tokens.scss';
+@import './src/shared/styles/ignitus-mixins.scss';
 
 .content-container {
 	margin-top: 0 !important;
@@ -25,9 +26,6 @@
 }
 
 .intro__wrapper {
-	background: url('https://storage.googleapis.com/ignitus/Assets/split-blue-background.png') no-repeat;
-	background-size: 70%;
-	background-position: top right;
 
 	height: 1200px;
 
@@ -65,45 +63,14 @@
 		margin-top: 0;
 	}
 
-	@media (max-width: 1145px) {
-		& {
-			background: -webkit-linear-gradient( 45deg, $ignite-color-blue-20 40%, $ignite-color-white 40% 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-	}
+	/* Intro header styles for matching bg-triangle split */ 
+	@include split-color-text(1145px, 40%);
+	@include split-color-text(892px, 41%);
+	@include split-color-text(800px, 46.5%);
+	@include split-color-text(682px, 49%);
+	@include split-color-text(568px, 51%);
+	@include split-color-text(396px, 61%);
 
-	@media (max-width: 892px) {
-		& {
-			background: -webkit-linear-gradient( 45deg, $ignite-color-blue-20 41%, $ignite-color-white 41% 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-	}
-
-	@media (max-width: 800px) {
-		& {
-			background: -webkit-linear-gradient( 45deg, $ignite-color-blue-20 46.5%, $ignite-color-white 46.5% 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-	}
-
-	@media (max-width: 682px) {
-		& {
-			background: -webkit-linear-gradient( 42deg, $ignite-color-blue-20 49%, $ignite-color-white 49% 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-	}
-
-	@media (max-width: 568px) {
-		& {
-			background: -webkit-linear-gradient( 42deg, $ignite-color-blue-20 51%, $ignite-color-white 51% 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-	}
 }
 
 .intro__torch {
